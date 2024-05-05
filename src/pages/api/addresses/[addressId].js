@@ -4,7 +4,6 @@ import { deleteAddress, readAddress, updateAddress } from "@/db/crud"
 const handle = mw(async (req, res) => {
   const { addressId } = req.query
 
-  // Read (item) => GET /addresss/:addressId
   if (req.method === "GET") {
     const address = await readAddress(addressId)
 
@@ -19,7 +18,6 @@ const handle = mw(async (req, res) => {
     return
   }
 
-  // Update (item) => PATCH /addresss/:addressId
   if (req.method === "PATCH") {
     const addressData = req.body
     console.log(addressData)
@@ -36,7 +34,6 @@ const handle = mw(async (req, res) => {
     return
   }
 
-  // Delete (item) => DELETE /addresss/:addressId
   if (req.method === "DELETE") {
     const addressToBeDelete = await deleteAddress(addressId)
 
