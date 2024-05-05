@@ -13,7 +13,7 @@ export const FormField = ({
     <span>{label}</span>
     <Field
       name={name}
-      className="border-2 focus:border-green-300 outline-none px-3 py-2 bg-white text-black font-mono"
+      className="border-2 focus:border-orange-300 outline-none px-3 py-2 bg-white text-black font-mono"
       placeholder={placeholder || label}
       {...otherProps}
     />
